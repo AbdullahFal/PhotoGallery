@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+  <div class="container">
+      <div class="coverText"><h1>Ready to go on an adventure?</h1>
+        <div id ="slider">
+            <a href ="1.jpg"><img src ="img/cat/cat13.jpg" ></a>
+            <a href ="2.jpg"><img src ="img/Space/space5.jpg"></a>
+            <a href ="3.jpg"><img src ="img/Ocean/19.jpg"></a>
+            <a href ="4.jpg"><img src ="img/Mountains/16.jpg"></a>
+            <a href ="5.jpg"><img src ="img/Dogs/3.jpg"></a>
+        </div>
+        <script>
+
+            document.addEventListener("DOMContentLoaded", function() {
+          
+              var fadeComplete = function(e) { stage.appendChild(arr[0]); };
+          
+              var stage = document.getElementById("slider");
+              var arr = stage.getElementsByTagName("a");
+              for(var i=0; i < arr.length; i++) {
+               
+                arr[i].addEventListener("animationend", fadeComplete, false);
+               
+              }
+          
+            }, false);
+            </script>
+
+          <div class="btn"><a href="explore.html">Let's Explore!</a></div>
+      </div>
+  </div>
+  <div class="section1">
+    <h1>Website By</h1>
+    <div class="grid-wrapper">
+
+      <div class="card zone">
+          <img src="img/IMG_5561cut.png">
+          <div class="text">
+              <h1>Abdullah Abualfaraa</h1>
+              <button><a href="https://www.linkedin.com/in/abdullah-abualfaraa" target="_blank">Contact</a></button>
+          </div>    
+      </div>
+    </div>
+  </div>
+   <footer class="zone"><p>Isn't this website cool?</p> </footer>
+    </body>
+</html>

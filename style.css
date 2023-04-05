@@ -1,0 +1,163 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+
+#slider{
+	margin:none;
+	width:80px;
+	height:450px;
+    position: sticky;
+}
+#slider a{
+	position:absolute;
+}
+#slider a img{
+	padding:1px;
+	border:none;
+	background:#fff;
+	width:800px;
+	height:450px;
+}
+#slider a:nth-of-type(1){
+	animation-name:fader;
+	animation-delay:3s;
+	animation-duration:1s;
+	z-index:20;
+}
+#slider a:nth-of-type(2){
+	z-index:10;
+}
+#slider a:nth-of-type(n+3){
+	display:none;
+}
+@keyframes fader{
+	from{opacity:1.0;}
+	to{opacity:0.0};
+}
+
+.push {
+    margin-left: auto;
+}
+
+.sticky {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container:before {
+  content: "";
+  width: 100%;
+  z-index: -1;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: grow 60s linear .5s infinite;
+  background: url(img/BG3.jpg) no-repeat fixed top center / cover;
+}
+
+.coverText {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+}
+
+.btn{
+  height: 60px;
+  width: 200px;
+  margin-top: 100px;
+  display: inline-block;
+  font-family: arial black;
+  text-align: center;
+  text-decoration: none;
+  line-height: 60px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 17px;
+  box-sizing: border-box;
+  background: rgba(255,255,255, 0.2);
+  background-size: 400%;
+  border-radius: 10px;
+  border:2px solid #fff;
+ cursor: pointer;
+  z-index: 1;
+}
+
+.btn:hover{
+    background: #000;
+}
+
+.section1{
+    text-align: center;
+    font-size: 2em;
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 10px;
+    color:#fff;
+}
+
+.card {
+    background-color: #444;
+    margin: 50px;
+    border-radius: 10px;
+}
+
+.card > img {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px 10px 0 0;
+}
+
+.card h1 {
+    font-size: 1.5rem;
+}
+
+.card p {
+    font-size: 1rem;
+}
+
+.card > .text {
+    padding: 0 20px 20px;
+}
+
+button {
+    cursor: pointer;
+    background: gray;
+    border: 0;
+    font-size: 1rem;
+    color: white;
+    padding: 10px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #e0d27b;
+}
+
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: #30336b;
+    color:#fff;
+}
